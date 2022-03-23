@@ -1,6 +1,21 @@
 *{
   margin:0;
   padding:0;
+  font-family: 'Nunito', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+.navbar {
+  height: 50px;
+  background-color:rgba(0, 0, 0, 0.315);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  color:#ffffff;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
 .container {
   display: flex;
@@ -12,8 +27,9 @@
 .card-container {
   width: 20vw;
   height: 20vh;
-  border: solid black 1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
+  padding: 20px;
 
 }
 .title {
@@ -29,4 +45,32 @@
 }
 .err {
   color:rgb(253, 30, 30);
+}
+
+/* spinner  */
+
+.spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left-color: rgb(246, 246, 246);
+  animation: spin 1s ease infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* end spinner  */
+.spinner-container {
+text-align: center;
+}
+.spinner-title {
+  color: rgba(0, 0, 0, 0.315);
+  text-align: center;
 }
