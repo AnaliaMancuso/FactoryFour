@@ -74,9 +74,10 @@ export default function useGetData() {
       getData();
     }, 15000);
     return () => clearInterval(interval);
-  }, [data, dataErr]);
+  }, [data, dataErr]); //eslint-disable-line react-hooks/exhaustive-deps
   return {
     data,
     dataErr,
   };
 }
+
