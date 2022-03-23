@@ -31,7 +31,7 @@ function App() {
         name: el,
         url: `https://api.factoryfour.com/${el}/health/status`,
       };
-      arrUrls.push(oneUrl);
+      return arrUrls.push(oneUrl);
     });
   }
   getUrls();
@@ -68,7 +68,7 @@ function App() {
     };
     useEffect(() => {
       setInterval(getData, 15000);
-    }, []);
+    });
   }
 
   useGetData();
