@@ -55,14 +55,10 @@ export default function useGetData() {
             message: res.data.message,
             time: moment(res.data.time).format("LTS"),
           };
-
           allData.push(resData);
-
-          console.log("alldata", allData.length);
           if (allData.length > 14) {
             setData(allData);
           }
-          console.log("data", data);
         })
         .catch((err) => {
           let errData = {
